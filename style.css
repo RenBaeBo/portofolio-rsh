@@ -1,0 +1,192 @@
+/* GENERAL */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* NAVBAR */
+nav{
+    background: white;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav .logo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #4a90e2;
+}
+
+/* HERO */
+.hero{
+    background: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.highlight{
+    color: yellow;
+}
+
+/* ABOUT */
+.about{
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.profile-img{
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+/* SKILLS */
+.skills{
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.skills-list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card{
+    background: #4a90e2;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* PROJECTS */
+.projects{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.project-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card{
+    background: white;
+    width: 260px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.project-card img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* CONTACT */
+.contact{
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+}
+
+.contact ul{
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li{
+    margin: 8px 0;
+}
+
+.contact a{
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+}
+
+/* ---------------------------- */
+/*       ANIMATIONS            */
+/* ---------------------------- */
+.fade-in{
+    animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+.zoom{
+    transition: 0.3s;
+}
+.zoom:hover{
+    transform: scale(1.05);
+}
+
+.slide-up{
+    animation: slideUp 1.2s ease;
+}
+@keyframes slideUp{
+    from{ opacity: 0; transform: translateY(40px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------- */
+/*        RESPONSIVE           */
+/* ---------------------------- */
+@media (max-width: 768px){
+
+    nav ul{
+        display: none; /* simple untuk pemula */
+    }
+
+    .skills-list{
+        flex-direction: column;
+    }
+
+    .project-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card{
+        width: 90%;
+    }
+}
